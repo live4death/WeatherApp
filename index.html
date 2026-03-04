@@ -6,24 +6,128 @@
     <title>Weather App Interface</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-
     <div class="weather-card">
         <div class="top-row">
             <div class="titles">
                 <h1>Weather</h1>
-                <h2>Cloudly</h2>
+                <h2>Cloudy</h2>
             </div>
             <div class="badges">
-                <input class="badge" id="date-input" placeholder="Select Date and Time" aria-label="Date">
-                <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-                <script src="script.js"></script>
-                    <!-- <input class="badge" id="date-input" type="date" aria-label="Date">
-                    <input class="badge" id="time-input" type="time" value="22:00" aria-label="Time"> -->
-                <input class="badge" id="city-input" list="cities" placeholder="Select City" aria-label="City">
+                <input class="badge" id="city-input" list="cities" placeholder="Search your city" aria-label="City">
+                <i class="fas fa-magnifying-glass search-icon-abs"></i>            
             </div>
         </div>
+        <!-- <div class="dates">
+            <p>Mon <br>12</p>
+            <p>Tue <br>13</p>
+            <p>Wed <br>14</p>
+            <p>Thu <br>15</p>
+            <p>Fri <br>16</p>
+        </div> -->
+        <!-- <div class="middle-row">
+            <div class="date-temp">
+                <span class="date-icon">⛅</span>
+                <p>3°C</p>
+            </div>
+            <div class="date-temp">
+                <span class="date-icon">☀️</span>
+                <p>2°C</p>
+            </div>
+            <div class="date-temp">
+                <span class="date-icon">🌧️</span>
+                <p>2°C</p>
+            </div>
+             <div class="date-temp">
+                <span class="date-icon">⛈️</span>
+                <p>2°C</p>
+            </div>
+            <div class="date-temp">
+                <span class="date-icon">❄️</span>
+                <p>2°C</p>
+            </div>
+        </div> -->
+
+<div class="weather-widget">
+    <div class="day-column active">
+        <div class="header">
+            <div class="day-name">MA</div>
+            <div class="date">Astăzi</div>
+        </div>
+        <div class="weather-box">
+            ⛅
+        </div>
+        <div class="details-box">
+            <div class="temp-badge temp-high">15 °C</div>
+            <div class="temp-badge temp-low">1 °C</div>
+            <div class="stat-row">↙ 6 km/h</div>
+        </div>
+    </div>
+
+    <div class="day-column">
+        <div class="header">
+            <div class="day-name">MI</div>
+            <div class="date">Mâine</div>
+        </div>
+        <div class="weather-box">
+            🌤️
+        </div>
+        <div class="details-box">
+            <div class="temp-badge temp-high">15 °C</div>
+            <div class="temp-badge temp-low">2 °C</div>
+            <div class="stat-row">⬅ 5 km/h</div>
+        </div>
+    </div>
+
+    <div class="day-column">
+        <div class="header">
+            <div class="day-name">JO</div>
+            <div class="date">5/3</div>
+        </div>
+        <div class="weather-box">
+            ⛅
+        </div>
+        <div class="details-box">
+            <div class="temp-badge temp-high">16 °C</div>
+            <div class="temp-badge temp-low">4 °C</div>
+            <div class="stat-row">↘ 7 km/h</div>
+
+        </div>
+    </div>
+
+    <div class="day-column">
+        <div class="header">
+            <div class="day-name">VI</div>
+            <div class="date">6/3</div>
+        </div>
+        <div class="weather-box">
+            ☀️
+        </div>
+        <div class="details-box">
+            <div class="temp-badge temp-high">15 °C</div>
+            <div class="temp-badge temp-low">3 °C</div>
+            <div class="stat-row">⬇ 11 km/h</div>
+
+        </div>
+    </div>
+
+    <div class="day-column">
+        <div class="header">
+            <div class="day-name">SB</div>
+            <div class="date">7/3</div>
+        </div>
+        <div class="weather-box">
+            ☀️
+        </div>
+        <div class="details-box">
+            <div class="temp-badge temp-high">15 °C</div>
+            <div class="temp-badge temp-low">2 °C</div>
+        </div>
+    </div>
+</div>
+
 
         <div class="bottom-row">
             <div class="icon">

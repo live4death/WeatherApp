@@ -1,118 +1,257 @@
-/* Setăm un fundal frumos pentru a face efectul de sticlă vizibil */
-        body {
-            margin: 0;
-            min-height: 100vh;
-            display: flex;
-            background: url('https://images.unsplash.com/photo-1558486012-817176f84c6d?q=80&w=2000&auto=format&fit=crop') no-repeat center center/cover;
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-        }
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    background: url('https://images.unsplash.com/photo-1558486012-817176f84c6d?q=80&w=2000&auto=format&fit=crop') no-repeat center center/cover;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
 
-        /* Containerul principal - Efectul de Glassmorphism */
-        .weather-card {
-            background: rgba(255, 255, 255, 0.4);
-            backdrop-filter: blur(15px);
-            -webkit-backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.5);
-            border-radius: 24px;
-            padding: 30px;
-            margin: 20px;
-            width: 100%;
-            max-height: 220px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-            color: #1e293b;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
+.weather-card {
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 24px;
+    padding: 30px;
+    margin: 20px;
+    width: 100%;
+    max-height: 700px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    color: #1e293b;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
-        .top-row {
-            display: flex;          
-            min-width: 0;
-            margin-bottom: 30px;
-        }
-        
-        .titles h1 {
-            margin: 0;
-            font-size: 32px;
-            font-weight: 700;
-        }
+.top-row {
+    display: flex;
+    min-width: 0;
+    margin-bottom: 30px;
+}
 
-        .titles h2 {
-            margin: 5px 0 0 0;
-            font-size: 22px;
-            font-weight: 500;
-            color: #334155;
-        }
+.titles h1 {
+    margin: 0;
+    font-size: 46px;
+    font-weight: 700;
+}
 
-        .titles{
-            flex:1;
-            min-width: 0;
-        }
+.titles h2 {
+    margin: 5px 0 0 0;
+    font-size: 32px;
+    font-weight: 500;
+    color: #334155;
+}
 
-    .badges{
-        flex: 1;
-        gap: 10px;
-        min-width: 0;
+.titles {
+    flex: 1;
+    min-width: 0;
+}
+
+.badges {
+    flex: 1;
+    gap: 10px;
+    min-width: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+input:focus {
+    outline: none;
+}
+
+input::placeholder {
+    color: #1e293b;
+}
+
+.badge {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 8px;
+    border: none;
+    background: rgba(53, 41, 41, 0.1);
+    color: #1e293b;
+    height: 46px;
+    padding: 0 50px 0 20px;
+    flex: 0 0 70%;
+}
+
+.search-icon-abs {
+    position: absolute;
+    margin-right: 15px;
+    margin-top: 15px;
+}
+
+.bottom-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon {
+    font-size: 100px;
+    line-height: 1;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.temperature {
+    font-size: 78px;
+    font-weight: 700;
+    margin-right: auto;
+    margin-left: 50px;
+}
+
+.details {
+    text-align: left;
+}
+
+.details p {
+    margin: 6px 0;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.middle-row {
+    display: flex;
+    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 70px;
+}
+
+.date-temp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.date-temp p {
+    margin: 0;
+}
+
+.date-icon{
+    font-size:50px;
+    width: 60px;
+    height: 60px;
+    margin: 0;
+}
+
+.dates{
+    display: flex;
+    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+    text-align: center;
+    margin: 0;
+}
+
+#temp-line {
+    border-color: #1e293b24;
+    width: 100%;
+    margin: 0;
+}
+
+    .weather-widget {
         display: flex;
-    }
-
-    .badge{
-        font-size: 14px;
-        font-weight: 100;
+        width: fit-content;
+        margin: 0 auto;
+        background-color: var(--bg-light);
         border-radius: 8px;
-        border: none;
-        background: rgba(255,255,255,0.12);
-        color: inherit;
-        height: 36px;
-        padding: 10px 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        border: 1px solid #e0e0e0;
+        margin-bottom: 50px;
+        background-color: rgba(84, 78, 78, 0.19);
+;
     }
 
-    #city-input{
-        min-width: 0;
-        flex: 0 0 30%;
+    .day-column {
+        display: flex;
+        flex-direction: column;
+        width: 100px;
+        text-align: center;
+        position: relative;
+        border-right: 1px solid #e0e0e0;
+        background-color: var(--bg-light);
+    }
+    /* Stilizare coloană activă (Astăzi) */
+    /* .day-column.active {
+        border: 2px solid var(--text-blue);
+        border-radius: 6px;
+        box-shadow: inset 0 0 0 1px var(--bg-active-header);
+        z-index: 2; 
+    } */
+
+    .header {
+        padding-top: 10px;    
     }
 
-    #date-input{
-        flex: 1 1 auto;
-        min-width: 0;
+    .day-column.active .header {
+        background-color: var(--bg-active-header);
     }
 
-    .badge option{
-        color: #000;
+    .day-name {
+        font-weight: bold;
+        font-size: 14px;
+    }
+    .date {
+        font-size: 12px;
+        margin-top: 3px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #e0e0e0;
     }
 
-        .check {
-            color: #10b981; /* Verde pentru checkmark */
-            font-size: 16px;
-        }
+    /* Secțiunea albastră cu soarele/norii */
+    .weather-box {
+        padding: 15px 0;
+        font-size: 32px;
+        position: relative;
+        height: 40px;
+        background-color: #9bcbf876;
+        border-bottom: 1px solid #e0e0e0;
+    }
 
-        /* Rândul de jos: Pictogramă, Temperatură și Detalii */
-        .bottom-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+    /* Restul detaliilor (temperaturi, vânt) */
+    .details-box {
+        padding: 15px 5px 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        font-size: 13px;
+        color: #333;
+    }
 
-        .icon {
-            font-size: 100px;
-            line-height: 1;
-            /* Umbră subtilă pentru emoji ca să pară 3D */
-            text-shadow: 2px 2px 10px rgba(0,0,0,0.2); 
-        }
+    .temp-badge {
+        width: 50px;
+        padding: 4px 0;
+        border-radius: 4px;
+        font-weight: bold;
+        font-size: 13px;
+    }
+    
+    .temp-high {
+        background-color: var(--color-high-temp);
+        color: #222;
+    }
+    .temp-low {
+        background-color: var(--color-low-temp);
+        color: white;
+    }
 
-        .temperature {
-            font-size: 78px;
-            font-weight: 700;
-            margin-right: auto;
-            margin-left: 50px;
-        }
+    .stat-row {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        font-size: 12px;
+    }
 
-        .details {
-            text-align: left;
-        }
+    .misc-icons {
+        margin-top: 5px;
+        color: #799bbb;
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
 
-        .details p {
-            margin: 6px 0;
-            font-size: 24px;
-            font-weight: 500;
-        }

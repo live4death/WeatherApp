@@ -10,8 +10,8 @@ class Api:
 webview.create_window(
     "Weather App",
     "index.html",
-    width=700,
-    height=400,
+    width=900,
+    height=720,
     resizable=False
 )
 
